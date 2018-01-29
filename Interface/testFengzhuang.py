@@ -15,10 +15,11 @@ class TestApi(object):
 	def testapi(self):
 		if self.fangshi=='POST':
 			self.parem = {'key': self.key, 'info': self.connent}
-			response=reques.post(self.url,self.parem)
+			response = reques.post(self.url,self.parem)
 		elif self.fangshi=="GET":
 			self.parem = {'key': self.key, 'info': self.connent}
-			response = reques.get(self.url,self.parem)
+			# response = reques.get(self.url,self.parem)
+			response = reques.get(self.url)
 		return response
 	def getcode(self):
 		code=self.testapi()['code']
